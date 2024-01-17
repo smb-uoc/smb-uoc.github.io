@@ -36,16 +36,15 @@ header {
 
 header div {
   display: flex;
-  justify-content: space-between;
   font-weight: 700;
-  flex-wrap: wrap;
-  flex-direction: row;
   align-items: center;
 }
 
 header nav {
   display: flex;
   align-items: center;
+  flex: 1 1 80%;
+  justify-content: flex-end;
 }
 
 header nav ul {
@@ -71,7 +70,9 @@ header nav ul li:nth-child(1) {
 
 header a img {
   padding: 1rem;
-  scale: 80%;
+  width: 100%;
+  height: auto;
+  max-width: max-content;
 }
 
 header a {
@@ -79,6 +80,7 @@ header a {
   text-decoration: none;
   border: none;
   padding: 0rem;
+  flex: 1 1 20%;
 }
 
 header a:hover,
@@ -116,8 +118,7 @@ footer a:hover {
 }
 
 .footer-left img {
-  max-width: 100%;
-  height: auto;
+  scale: 80%;
 }
 
 .footer-social {
@@ -163,6 +164,7 @@ footer ul {
   font-weight: 900;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .container > h2 {
@@ -175,7 +177,9 @@ footer ul {
     font-size: 2rem;
 }
 
-.container {
+.container,
+.blog-container,
+.entrada-container {
   padding: 1rem;
   background-color: rgb(247, 247, 247);
   padding-bottom: 2rem;
@@ -271,6 +275,11 @@ main .button:hover {
 
 .container-card img {
     width: 100%;
+}
+
+.container-column {
+    padding-bottom: 2rem;
+    box-sizing: border-box;
 }
 
 .category-text {
@@ -377,6 +386,116 @@ li a.current-pagination-page {
     border: none;
 }
 
+/* --------------------- Entrada.html --------------------- */
+.breadcrumb {
+    font-size: 0.85rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.entrada-card {
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.entrada-card p,
+.entrada-card li {
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.entrada-card ol {
+    padding-left: 1.5rem;
+}
+
+.entrada-card h2 {
+    font-family: "Noto Serif", serif;
+    font-size: 2rem;
+}
+
+.entrada-title {
+    background-color: rgb(229, 225, 254);
+}
+
+.card-info h1 {
+    font-family: "Noto Serif", serif;
+    font-size: 2.5rem;
+    color: rgb(0, 59, 74);
+    margin: 0;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    border: none;
+}
+
+a.entrada-category {
+    color: rgb(0, 59, 74);
+    border: none;
+}
+
+a.entrada-category:hover {
+    color: rgb(191, 12, 240);
+    border: none;
+}
+
+p.subtitle {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+blockquote {
+    border-left: 3px solid rgb(191, 12, 240);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.container h3 {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+
+.recent {
+    margin-bottom: 2rem;
+}
+
+.categories {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 7rem;
+}
+
+.categories ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.categories li {
+    padding: 1rem 0.35rem;
+}
+
+.categories li a {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 59, 74);
+    color: rgb(0, 59, 74);
+    padding: 0.35rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.categories li a:hover {
+    background-color: rgb(191, 12, 240);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+
 /* --------------------- Regras de responsividade --------------------- */
 @media screen and (min-width: 480px) {
     main form {
@@ -425,20 +544,39 @@ li a.current-pagination-page {
     }
 
     .container-column {
-        padding: 1rem;
         flex: 0 0 50%;
-        box-sizing: border-box;
+        padding: 0.5rem;
+    }
+
+    .recent-flex {
+        display: flex;
+    }
+
+    .recent {
+        flex: 1 1 auto;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
   }
   
   @media screen and (min-width: 1024px) {
     .hero,
-    .container,
-    .entries {
+    .entries,
+    .container {
       padding-left: 20%;
       padding-right: 20%;
     }
-  
+
+    .entrada-container {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+
+    .blog-container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     .container-columns {
       display: flex;
     }
@@ -511,9 +649,7 @@ li a.current-pagination-page {
     }
 
     .container-column {
-        padding: 1rem;
         flex: 0 0 25%;
-        box-sizing: border-box;
     }
 
     .container-column:first-child {
@@ -529,4 +665,41 @@ li a.current-pagination-page {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
+    .sidebar-flex {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .entrada-main {
+        flex: 0 0 60%;
+        padding-right: 1rem;
+    }
+
+    .entrada-sidebar {
+        flex: 0 0 20%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .recent-flex {
+        display: block;
+    }
+
+    .breadcrumb {
+        flex: 1 1 100%;
+    }
+
+    .entrada-sidebar h3 {
+        margin-top: 0;
+    }
+
+    .categories li {
+        padding: 0.5rem 0.35rem;
+    }
   }
+  
