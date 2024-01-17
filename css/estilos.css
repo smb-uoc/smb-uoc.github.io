@@ -537,7 +537,7 @@ iframe {
     font-size: 2rem;
 }
 
-/* --------------------- Regras de responsividade --------------------- */
+/* --------------------- Reglas responsivas --------------------- */
 @media screen and (min-width: 480px) {
     main form {
       width: 66%;
