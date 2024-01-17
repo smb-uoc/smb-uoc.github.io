@@ -9,8 +9,10 @@ body {
   margin: 0;
   padding: 0;
   min-width: 130px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+}
+
+h1, h2, h3 {
+  overflow-wrap: anywhere;
 }
 
 a {
@@ -164,8 +166,6 @@ footer ul {
   text-align: left;
   font-size: 3rem;
   font-weight: 900;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .container > h2 {
