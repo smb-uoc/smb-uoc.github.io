@@ -1,0 +1,158 @@
+/* --------------------------- HTML ELEMENTS ----------------------------- */
+html {
+    color: rgb(43, 52, 69);
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header,
+nav {
+    background-color: rgb(241, 245, 249);
+    text-align: center;
+}
+
+header {
+    font-size: 2.5em;
+}
+
+.fuenteTitulo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.5em;
+}
+
+a {
+    color: rgba(254, 105, 106);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header a,
+nav a {
+    color: rgb(43, 52, 69);
+}
+
+a:hover {
+    color: rgba(254, 105, 106, 0.5);
+}
+
+header a:hover {
+    color: rgba(43, 52, 69, 0.5);
+}
+
+nav a:hover {
+    color: rgba(254, 105, 106);
+}
+
+nav a[href="#"] {
+    color: rgb(254, 105, 106);
+}
+
+nav ul {
+    line-height: 2;
+    list-style-type: none;
+    margin-top: 0;
+    padding-bottom: 16px;
+    padding-left: 0;
+}
+
+article {
+    width: 95%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+blockquote {
+    border-left: 6px solid rgb(254, 105, 106);
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: rgb(199, 199, 199);
+    font-size: 0.7em;
+    height: 60px;
+    padding: 20px;
+}
+
+/* --------------------------- INDEX ELEMENTS ----------------------------- */
+
+.autoryfecha {
+    font-size: small;
+    text-align: center;
+}
+
+#intro {
+    line-height: 1.5;
+    margin-left: 10%;
+    margin-top: 32px;
+    width: 80%;
+}
+
+/* --------------------------- ESTADISTICAS ELEMENTS ----------------------------- */
+
+
+ol>li {
+    padding-bottom: 8px;
+    font-size: 20px;
+}
+
+ul>li {
+    font-size: 14px;
+    list-style-type: disc;
+    padding: 4px;
+}
+
+ul>li:first-child {
+    padding-top: 10px;
+}
+
+li.icon {
+    list-style-image: url(../img/users.svg);
+}
+
+li.icon li {
+    list-style-image: initial;
+}
+
+
+/* --------------------------- REDES ELEMENTS ----------------------------- */
+
+dt {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+    margin-top: -12px;
+}
+
+figure {
+    text-align: center;
+}
+
+.imgredes {
+    width: 50%;
+}
+
+
+figcaption {
+    font-size: 0.7em;
+    padding-top: 10px;
+}
+
+.moreinfo {
+    font-size: 0.8em;
+}
