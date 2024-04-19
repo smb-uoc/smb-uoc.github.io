@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>AMPED - Tickets</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="css/estilos.css" rel="stylesheet">
+    <link href="img/favicon-32x32.png" rel="icon" type="image/png">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header class="content-page">
+    <div class="overlay">
+        <a href="index.html">
+            <img alt="El logo del festival: un altavoz y el texto Amped Festival" src="img/logo.svg">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="info.html">INFORMACIÓN</a></li>
+                <li><a href="calendario.html">CALENDARIO</a></li>
+                <li><a class="current-page" href="tickets.html">ENTRADAS</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="description">
+        <h1>Compra tus entradas</h1>
+        <p>
+            Ser parte del Amped Festival es una experiencia que no querrás perderte. Ya sea que desees estar en primera
+            fila o disfrutar del ambiente desde un espacio VIP, tenemos diferentes tipos de entradas para satisfacer tus
+            necesidades. Completa el formulario a continuación para asegurarte de estar presente en este evento musical
+            inigualable.
+        </p>
+    </section>
+    <div class="details">
+        <form action="/buy-tickets" id="buy-tickets" method="post" name="buy-tickets">
+            <fieldset>
+                <legend>Información personal</legend>
+                <div class="formline">
+                    <div class="formblock formblock50">
+                        <label class="required" for="name" title="Este campo es obligatorio">Nombre:</label>
+                        <input id="name" name="name"
+                               pattern="['\-a-zA-ZáéíóúüñÁÉÍÓÚÜÑ]{3,64}"
+                               placeholder="Nombre"
+                               required
+                               title="Se aceptan entre 3 y 64 letras, sin números (puede contener guiones y apóstrofos)"
+                               type="text">
+                    </div>
+                    <div class="formblock formblock50">
+                        <label class="required" for="surname" title="Este campo es obligatorio">Apellidos:</label>
+                        <input id="surname" name="surname"
+                               pattern="['\-a-zA-ZáéíóúüñÁÉÍÓÚÜÑ]{3,128}"
+                               placeholder="Apellidos" required
+                               title="Se aceptan entre 3 y 128 letras, sin números (puede contener guiones y apóstrofos)"
+                               type="text">
+                    </div>
+                </div>
+                <div class="formline">
+                    <div class="formblock formblock50">
+                        <label class="required" for="email" title="Este campo es obligatorio">Correo
+                            Electrónico:</label>
+                        <input id="email" name="email"
+                               placeholder="E-mail"
+                               required type="email">
+                    </div>
+                    <div class="formblock formblock50">
+                        <label for="phone">Teléfono:</label>
+                        <input id="phone" name="phone" placeholder="Teléfono de contacto" type="tel">
+                    </div>
+                </div>
+                <div class="formline">
+                    <div class="formblock formblock50">
+                        <label class="required" for="birthdate" title="Este campo es obligatorio">
+                            Fecha de Nacimiento:
+                        </label>
+                        <input id="birthdate" name="birthdate" required type="date">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Tipo de Entrada</legend>
+                <p>Elige el tipo de entrada que prefieres para tu experiencia en el Amped Festival. Cada opción ha sido
+                    diseñada para proporcionarte el mejor acceso y comodidades durante el evento.
+                </p>
+                <div class="formline">
+                    <div class="formblock formblock100">
+                        <label for="ticket_type">Selecciona tu Entrada:</label>
+                        <select id="ticket_type" name="ticket_type">
+                            <option value="general">Entrada General - 50€</option>
+                            <option value="vip">Entrada VIP - 150€ (incluye acceso backstage y zona preferencial)</option>
+                            <option value="pass">Pase de dos Días - 120€</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Método de Pago</legend>
+                <p>
+                    <input id="paypal" name="payment_method" type="radio" value="paypal">
+                    <label for="paypal">Paypal</label>
+                </p>
+                <p>
+                    <input id="card" name="payment_method" type="radio" value="card">
+                    <label for="card">Tarjeta de Crédito</label>
+                </p>
+                <p>
+                    <input id="bizum" name="payment_method" type="radio" value="bizum">
+                    <label for="bizum">Bizum</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Información de Tarjeta</legend>
+                <div class="formline">
+                    <div class="formblock">
+                        <label for="card_number">Número de tarjeta de crédito/débito:</label>
+                        <input id="card_number" name="card_number" pattern="\d{16}" placeholder="1234123412341234"
+                               title="Se aceptan sólo 16 dígitos)"
+                               type="text">
+                    </div>
+                    <div class="formblock">
+                        <label for="card_expiration">Fecha de expiración:</label>
+                        <input id="card_expiration" name="card_expiration" type="text">
+                    </div>
+                    <div class="formblock">
+                        <label for="card_cvc">CVC:</label>
+                        <input id="card_cvc" name="card_cvc" pattern="\d{3}" placeholder="123"
+                               type="text">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dirección de envío:</legend>
+                <div class="formline">
+                    <div class="formblock formblock100">
+                        <label class="required" for="address" title="Este campo es obligatorio">Dirección:</label>
+                        <input id="address" name="address"
+                               placeholder="Dirección"
+                               required type="text">
+                    </div>
+                </div>
+                <div class="formline">
+                    <div class="formblock formblock50">
+                        <label class="required" for="city" title="Este campo es obligatorio">Población:</label>
+                        <input id="city" name="city"
+                               placeholder="Población"
+                               required type="text">
+                    </div>
+                    <div class="formblock formblock50">
+                        <label class="required" for="zipcode" title="Este campo es obligatorio">Código Postal:</label>
+                        <input id="zipcode" name="zipcode"
+                               placeholder="C. Postal"
+                               required type="text">
+                    </div>
+                    <div class="formblock formblock50">
+                        <label for="country">País:</label>
+                        <select id="country" name="country">
+                            <option value="ES">España</option>
+                            <option value="OTHER">Otro</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="formsection">
+                <label for="user_message">Comentarios o Peticiones especiales</label>
+                <textarea id="user_message" name="user_message"></textarea>
+            </div>
+            <div class="formsection">
+                <input id="terms_accepted" name="terms_accepted" required type="checkbox"
+                       value="true">
+                <label for="terms_accepted">
+                    He leído y acepto los <a href="#">términos y condiciones</a> y la
+                    <a href="#">política de privacidad</a>.
+                </label>
+            </div>
+            <button>Comprar Entrada</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <p>
+        <a href="#">Aviso legal</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Política de cookies</a>
+    </p>
+    <p>2023 © Silvia Martínez Báez.</p>
+</footer>
+</body>
+</html>

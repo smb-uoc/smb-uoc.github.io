@@ -1,0 +1,423 @@
+/* --------------------- Configuraciones genéricas --------------------- */
+html {
+    color: #070e58;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #5865F2;
+    text-decoration: none;
+    border-bottom: 1px dotted #5865F2;
+    padding-bottom: 0.1rem;
+}
+
+a:hover {
+    border-bottom: 1px solid #a4f479;
+    color: #a4f479;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/amped_header.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 1rem 4.5rem 1rem;
+}
+
+nav li {
+    list-style-type: none;
+    padding: 0.25rem;
+    font-size: 1.08rem;
+}
+
+.overlay {
+    background-color: rgba(7, 14, 88, 0.7);
+    text-align: center;
+    margin: 1rem auto 1rem auto;
+}
+
+.overlay a {
+    border: none;
+}
+
+nav li a,
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+    border: none;
+}
+
+nav li a:hover {
+    color: #a4f479;
+}
+
+main {
+    font-weight: 300;
+    text-align: center;
+}
+
+footer {
+    background-color: #070e58;
+    height: 100px;
+    color: #fff;
+    font-weight: 300;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 15vw;
+}
+
+footer p {
+    margin: 0;
+    padding-top: 1rem;
+}
+
+footer p:last-child {
+    font-size: 0.85rem;
+}
+
+footer a:hover {
+    color: #a4f479;
+    border: none;
+}
+
+/* --------------------- Index.html --------------------- */
+body.index {
+    background-image: url("../img/home-hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-align: center;
+}
+
+header.index {
+    background-image: none;
+}
+
+main.index img {
+    width: 33vw;
+    margin-top: 4rem;
+    margin-bottom: 2em;
+}
+
+main.index h1 {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 900;
+    width: 75vw;
+    margin: 2rem auto;
+    line-height: 5rem;
+}
+
+footer.index {
+    background-color: transparent;
+    font-weight: 500;
+    padding-left: 0;
+    margin-top: 2rem;
+}
+
+footer a.credits {
+    color: #a4f479;
+}
+
+footer a.credits:hover,
+footer.index a:hover{
+    color: #5865F2;
+}
+
+/* --------------------- Content pages --------------------- */
+header div.overlay img {
+    width: 45%;
+    margin-top: 1rem;
+}
+
+a.current-page {
+    color: #a4f479;
+    border-bottom: 1px solid #a4f479;
+    padding-bottom: 0.3rem;
+}
+
+.description {
+    margin-left: 22.5vw;
+    margin-right: 22.5vw;
+}
+
+.description p,
+.description figure {
+    margin: 0;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.details {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    padding-top: 1.5rem;
+}
+
+/* --------------------- Info.html --------------------- */
+.description figure {
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.description figure iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.description figure figcaption {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    right: 0;
+    font-size: 0.7rem;
+}
+
+.details p {
+    text-align: left;
+    margin: 0.3rem;
+}
+
+.details dl {
+    text-align: left;
+    padding-left: 3rem;
+    margin-bottom: 4rem;
+}
+
+.details dl dt {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 0.5rem;
+}
+
+.details dl dd {
+    border-left: 3px solid #5865F2;
+    margin-left: 0;
+    padding-left: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+/* --------------------- Calendario.html --------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+caption {
+    border-top: 1px solid #5865F2;
+    border-bottom: 1px solid #5865F2;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+thead th:nth-child(1) {
+    width: 13%;
+}
+
+thead th:nth-child(2) {
+    width: 7%;
+}
+
+thead th:nth-child(3) {
+    width: 25%;
+}
+
+thead th:nth-child(4) {
+    width: 10%;
+}
+
+thead th:nth-child(5) {
+    width: 20%;
+}
+
+thead th:nth-child(6) {
+    width: 15%;
+}
+
+thead th:nth-child(7) {
+    width: 10%;
+}
+
+th,
+td {
+    padding: 0.5rem;
+}
+
+thead, tfoot {
+    border-bottom: 1px solid #5865F2;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #a4f479;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+tbody tr:nth-child(odd) a:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+tfoot {
+    font-size: 0.7rem;
+}
+
+/* --------------------- Tickets.html --------------------- */
+form {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+label.required::after {
+    content: " *";
+    color: red;
+}
+
+fieldset {
+    font-size: 1rem;
+    background-color: #dee0fd;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+}
+
+div.formsection,
+fieldset {
+    margin: 1rem 0;
+}
+
+legend {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+label {
+    font-weight: 500;
+    margin: 0.8rem 0;
+    word-break: break-word;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+select,
+select option,
+button {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.8rem 0;
+    font-size: 1rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    vertical-align: middle;
+    font-size: 1rem;
+}
+
+fieldset p {
+    margin: 0.2rem 0;
+}
+
+.formline {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.formblock {
+    float: left;
+    margin-right: 4px;
+}
+
+.formblock50{
+    width: 50%;
+}
+
+.formblock100 {
+    width: 100%;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 5rem;
+    max-width: 100%;
+    margin-top: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #5865F2;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 5rem;
+    padding: 1rem;
+}
+
+button:hover {
+    background-color: #070e58;
+    cursor: pointer;
+}
+
+select:focus-visible,
+input:focus:valid,
+input:required:valid {
+    border: 2px solid #a4f479;
+    outline-style: none;
+}
+
+input:focus:invalid {
+    border: 2px solid red;
+    outline-style: none;
+}
