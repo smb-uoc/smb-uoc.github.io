@@ -1,0 +1,1 @@
+!function(){let e=document.getElementById("theme-toggle"),t=document.body;e.addEventListener("click",function(){t.classList.toggle("theme-light"),t.classList.toggle("theme-dark")})}();
